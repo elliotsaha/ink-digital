@@ -15,8 +15,8 @@ const useStyles = makeStyles(theme =>
       justifyContent: "center",
       minHeight: '100vh',
       lineHeight: 0,
-      marginTop: '-3px',
-      marginBottom: '-3px'
+      marginTop: '-1px',
+      marginBottom: '-1px'
     },
     videoContainer: {
       overflow: "auto",
@@ -62,14 +62,14 @@ const useStyles = makeStyles(theme =>
         paddingLeft: '1.5rem',
       zIndex: 3,
       color: "white",
-      backgroundColor: "#325FD4",
+      backgroundColor: "#DD2854",
       textTransform: "none",
       fontFamily: "Lato, sans-serif",
       fontWeight: "bold",
       padding: "0.7rem",
       transition: "all 0.4s ease",
       "&:hover": {
-        backgroundColor: "#325FD4",
+        backgroundColor: "#DD2854",
         opacity: "85%",
       },
     },

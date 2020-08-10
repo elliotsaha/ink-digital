@@ -57,6 +57,7 @@ const useStyles = makeStyles(theme =>
       color: "white",
       fontFamily: "Poppins, sans-serif",
       fontWeight: 800,
+      fontSize: '1.7rem',
     },
   })
 )

@@ -43,14 +43,14 @@ const useStyles = makeStyles(theme =>
     button: {
       zIndex: 3,
       color: "white",
-      backgroundColor: "#1064B0",
+      backgroundColor: "#DD2854",
       textTransform: "none",
       fontFamily: "Lato, sans-serif",
       fontWeight: "bold",
       padding: "0.7rem",
       transition: "all 0.4s ease",
       "&:hover": {
-        backgroundColor: "#1064B0",
+        backgroundColor: "#DD2854",
         opacity: "85%",
       },
     },

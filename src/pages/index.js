@@ -4,6 +4,7 @@ import PanelOne from "../components/homepage/PanelOne"
 import PanelTwo from "../components/homepage/PanelTwo"
 import PanelThree from "../components/homepage/PanelThree"
 import PanelFour from '../components/homepage/PanelFour'
+import PanelFive from '../components/homepage/PanelFive'
 import SEO from "../components/seo"
 
 import "../index.css"
@@ -22,6 +23,9 @@ const IndexPage = () => {
       </div>
       <div className="child">
         <PanelFour />
+      </div>
+      <div className="child">
+        <PanelFive />
       </div>
     </Layout>
   )

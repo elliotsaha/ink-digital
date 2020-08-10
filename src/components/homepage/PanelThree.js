@@ -37,13 +37,13 @@ const useStyles = makeStyles(theme =>
       position: "relative",
       width: "100%",
       height: "100%",
-      marginBottom: "0.5rem",
+      marginBottom: "0.9rem",
     },
     cardContainerWithShift: {
       paddingTop: "2.95rem",
       display: "flex",
       flexDirection: "column",
-      paddingLeft: "0.25rem",
+      paddingLeft: "0.7rem",
       [theme.breakpoints.down(768)]: {
         paddingLeft: 0,
         paddingTop: 0,
@@ -72,11 +72,20 @@ const useStyles = makeStyles(theme =>
       color: "white",
       fontFamily: "Poppins, sans-serif",
       fontWeight: 800,
+      fontSize: '1.7rem',
       paddingBottom: "1.5rem",
     },
     image: {
       width: "30rem",
       height: "20rem",
+      margin: 0,
+      padding: 0,
+      display: "block",
+      objectFit: "cover",
+    },
+    imageLeft: {
+      width: "30rem",
+      height: "40.87rem",
       margin: 0,
       padding: 0,
       display: "block",
@@ -104,7 +113,7 @@ const useStyles = makeStyles(theme =>
       right: 0,
       height: "100%",
       width: "100%",
-      boxShadow: "inset 0 0 0 0 #325FD4",
+      boxShadow: "inset 0 0 0 0 #DD2854",
       "-webkit-transition": "all ease 0.8s",
       "moz-transition": "all ease 0.8s",
       transition: "all ease 0.3s",
@@ -114,7 +123,7 @@ const useStyles = makeStyles(theme =>
         transition: "all ease 1s",
       },
       "&:hover": {
-        boxShadow: "inset 30rem 0 0 0 #325FD4",
+        boxShadow: "inset 30rem 0 0 0 #DD2854",
         opacity: "95%",
         "& > div": {
           opacity: 1,
@@ -125,14 +134,14 @@ const useStyles = makeStyles(theme =>
     moreCaseStudiesButton: {
       zIndex: 3,
       color: "white",
-      backgroundColor: "#325FD4",
+      backgroundColor: "#DD2854",
       textTransform: "none",
       fontFamily: "Lato, sans-serif",
       fontWeight: "bold",
       padding: "0.7rem",
       transition: "all 0.4s ease",
       "&:hover": {
-        backgroundColor: "#325FD4",
+        backgroundColor: "#DD2854",
         opacity: "85%",
       },
     },
@@ -180,24 +189,7 @@ export default function PanelTwo() {
                 </div>
               </div>
 
-              <img src={google} className={classes.image} />
-            </div>
-
-            <div className={classes.card}>
-              <div className={classes.overlay}>
-                <div className={classes.hoverText}>
-                  <div className={classes.hoverTextInner}>
-                    <div className={classes.hoverTextSmall}>
-                      Profesional Services
-                    </div>
-                    <div className={classes.hoverTextMain}>
-                      Improving the tech industry by advertising the potential growth of a social network
-                    </div>
-                    <div className={classes.hoverTextSmall}>Facebook Inc.</div>
-                  </div>
-                </div>
-              </div>
-              <img src={facebook} className={classes.image} />
+              <img src={google} className={classes.imageLeft} />
             </div>
           </div>
 
