@@ -7,9 +7,10 @@ const useStyles = makeStyles(theme =>
     root: {
       background: "transparent",
       position: "relative",
-      paddingBottom: "5rem",
-      paddingTop: "5rem",
+      paddingBottom: "12rem",
+      paddingTop: "10rem",
       overflow: "auto",
+      marginBottom: '-1px',
     },
     cardContainer: {
       display: "flex",

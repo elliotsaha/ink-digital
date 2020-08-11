@@ -14,9 +14,10 @@ const useStyles = makeStyles(theme =>
     root: {
       background: "transparent",
       position: "relative",
-      paddingBottom: "5rem",
-      paddingTop: "5rem",
+      paddingBottom: "12rem",
+      paddingTop: "8rem",
       overflow: "auto",
+      marginBottom: '-2px',
     },
     cardContainer: {
       display: "flex",
@@ -90,6 +91,9 @@ const useStyles = makeStyles(theme =>
       padding: 0,
       display: "block",
       objectFit: "cover",
+      [theme.breakpoints.down(768)]: {
+        height: '20rem',
+      },
     },
     buttonContainer: {
       textAlign: "center",
@@ -235,10 +239,6 @@ export default function PanelTwo() {
         <Button className={classes.moreCaseStudiesButton}>
           More Case Studies
         </Button>
-      </div>
-
-      <div>
-        <div>Who We've Worked With</div>
       </div>
       <div className={classes.videoContainer}>
         <video
