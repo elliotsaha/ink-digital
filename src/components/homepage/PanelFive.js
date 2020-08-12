@@ -60,13 +60,13 @@ const useStyles = makeStyles(theme =>
       paddingBottom: "1.5rem",
       "& label.Mui-focused": {
         color: "white",
-        fontFamily: "Gilroy, sans-serif",
+        fontFamily: "Poppins, sans-serif",
         fontWeight: "bold",
       },
       "& label": {
         color: "white",
-        fontFamily: "Gilroy, sans-serif",
-        fontWeight: "bold",
+        fontFamily: "Poppins, sans-serif",
+        fontWeight: 600,
       },
       "& .MuiInput-underline:after": {
         borderBottomColor: "white",
@@ -183,7 +183,7 @@ export default function PanelFour() {
             <TextField
               InputProps={{
                 style: {
-                  fontFamily: "Gilroy, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   fontWeight: "bold",
                   color: "black",
                 },
@@ -205,7 +205,7 @@ export default function PanelFour() {
             <TextField
               InputProps={{
                 style: {
-                  fontFamily: "Gilroy, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   fontWeight: "bold",
                   color: "black",
                 },
@@ -226,7 +226,7 @@ export default function PanelFour() {
             <TextField
               InputProps={{
                 style: {
-                  fontFamily: "Gilroy, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   fontWeight: "bold",
                   color: "black",
                 },

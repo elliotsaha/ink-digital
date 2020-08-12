@@ -1,7 +1,7 @@
 html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    scroll-padding: 0.7rem;
+    scroll-padding: 0.1rem;
 }
 
 .child {

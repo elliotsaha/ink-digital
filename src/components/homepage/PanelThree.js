@@ -117,7 +117,7 @@ const useStyles = makeStyles(theme =>
       right: 0,
       height: "100%",
       width: "100%",
-      boxShadow: "inset 0 0 0 0 #DD2854",
+      boxShadow: "inset 0 0 0 0.01px #DD2854",
       "-webkit-transition": "all ease 0.8s",
       "moz-transition": "all ease 0.8s",
       transition: "all ease 0.3s",
@@ -128,7 +128,7 @@ const useStyles = makeStyles(theme =>
       },
       "&:hover": {
         boxShadow: "inset 30rem 0 0 0 #DD2854",
-        opacity: "95%",
+        opacity: "90%",
         "& > div": {
           opacity: 1,
           transition: "all ease 2.6s",
