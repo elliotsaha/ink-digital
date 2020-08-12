@@ -117,7 +117,7 @@ const useStyles = makeStyles(theme =>
       right: 0,
       height: "100%",
       width: "100%",
-      boxShadow: "inset 0 0 0 0.01px #DD2854",
+      boxShadow: "inset 0 0 0 0.1px #DD2854",
       "-webkit-transition": "all ease 0.8s",
       "moz-transition": "all ease 0.8s",
       transition: "all ease 0.3s",
