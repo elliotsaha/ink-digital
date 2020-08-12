@@ -118,9 +118,7 @@ const useStyles = makeStyles(theme =>
       height: "100%",
       width: "100%",
       boxShadow: "inset 0 0 0 0.1px #DD2854",
-      "-webkit-transition": "all ease 0.8s",
-      "moz-transition": "all ease 0.8s",
-      transition: "all ease 0.3s",
+      transition: "all ease 0.35s",
       opacity: "95%",
       "& > div": {
         opacity: 0,
@@ -131,7 +129,7 @@ const useStyles = makeStyles(theme =>
         opacity: "90%",
         "& > div": {
           opacity: 1,
-          transition: "all ease 2.6s",
+          transition: "all ease 1s",
         },
       },
     },
@@ -180,6 +178,7 @@ export default function PanelTwo() {
             <div className={classes.caseStudiesTitle}>Case Studies</div>
             <div className={classes.card}>
               <div className={classes.overlay}>
+                <span></span>
                 <div className={classes.hoverText}>
                   <div className={classes.hoverTextInner}>
                     <div className={classes.hoverTextSmall}>
