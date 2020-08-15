@@ -7,7 +7,9 @@ import Button from "@material-ui/core/Button"
 
 const useStyles = makeStyles(theme =>
   createStyles({
-    root: {},
+    root: {
+      
+    },
     video: {
       position: "absolute",
       width: "100%",

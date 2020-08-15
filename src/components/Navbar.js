@@ -442,7 +442,7 @@ export default function Navbar() {
               Services
             </Link>
           </div>
-          <Link to="/services" className={classes.inactiveContact}>
+          <Link to="/contact" className={classes.inactiveContact}>
             <Button className={classes.contactButton}>Contact</Button>
           </Link>
         </div>
