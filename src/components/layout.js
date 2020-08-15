@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import Header from "./header"
+import Navbar from "../components/Navbar"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -21,10 +22,19 @@ const Layout = ({ children }) => {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
-         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet" /> 
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&display=swap" rel="stylesheet" /> 
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Raleway:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
       </Helmet>
-      <main>{children}</main>
+      <main>
+        <Navbar />
+        {children}
+      </main>
     </>
   )
 }
