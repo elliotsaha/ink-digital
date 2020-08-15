@@ -68,6 +68,7 @@ const useStyles = makeStyles(theme =>
     closeMenuButton: {
       marginRight: "auto",
       marginLeft: 0,
+      color: 'white',
     },
     drawerPaper: {
       width: drawerWidth,
@@ -515,7 +516,7 @@ export default function Navbar() {
               onClick={handleDrawerToggle}
               className={classes.closeMenuButton}
             >
-              <CloseIcon className={classes.sideBarInactive} />
+              <CloseIcon className={classes.closeMenuButton} />
             </IconButton>
             {drawer}
           </Drawer>
