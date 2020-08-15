@@ -15,7 +15,8 @@ const useStyles = makeStyles(theme =>
       borderRadius: "0.5rem",
     },
     cardTitle: {
-      fontFamily: "Lato, sans-serif",
+      fontFamily: "Poppins, sans-serif",
+      lineHeight: '2.3rem',
       fontWeight: "900",
       fontSize: "2rem",
     },
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme =>
       width: "5rem",
     },
     paragraphContainer: {
-      height: '15rem',
+      height: "15rem",
       paddingTop: "1.2rem",
       fontFamily: "Poppins, sans-serif",
       paddingBottom: "0.9rem",
@@ -38,7 +39,7 @@ const useStyles = makeStyles(theme =>
     },
     readMoreText: {
       color: "#DD2854",
-      fontFamily: "Lato, sans-serif",
+      fontFamily: "Poppins, sans-serif",
       textTransform: "uppercase",
       fontSize: "0.85rem",
       fontWeight: 900,
@@ -46,7 +47,7 @@ const useStyles = makeStyles(theme =>
     button: {
       marginLeft: 0,
       paddingLeft: 0,
-    }
+    },
   })
 )
 

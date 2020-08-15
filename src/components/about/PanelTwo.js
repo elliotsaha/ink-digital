@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme =>
       maxWidth: "90rem",
       marginLeft: "auto",
       marginRight: "auto",
-      [theme.breakpoints.down(1124)]: {
+      [theme.breakpoints.down(900)]: {
         gridTemplateColumns: '1fr'
       },
     },
@@ -33,7 +33,6 @@ const useStyles = makeStyles(theme =>
       justifyContent: "center",
       paddingBottom: "1rem",
       objectFit: "cover",
-      maxHeight: "20rem",
       overflow: "hidden",
     },
     employeeImage: {
@@ -41,25 +40,50 @@ const useStyles = makeStyles(theme =>
       width: "20rem",
       height: "auto",
       margin: 0,
-      height: "19rem",
+      height: "20rem",
       transition: "all 0.3s ease",
+      [theme.breakpoints.down(1124)]: {
+        width: '14rem',
+        height: '14rem',
+      },
     },
     employeeSubTitle: {
       fontSize: "1.5rem",
       fontWeight: "600",
       paddingTop: "0.3rem",
       paddingBottom: "0.6rem",
+      [theme.breakpoints.down(1124)]: {
+        fontSize: '1.2rem',
+        paddingTop: 0,
+      },
+      [theme.breakpoints.down(900)]: {
+        fontSize: '1.5rem',
+      },
     },
     employeeName: {
       paddingBottom: "0.5rem",
       fontSize: "2rem",
       fontWeight: "700",
       lineHeight: "2rem",
+      [theme.breakpoints.down(1124)]: {
+        fontSize: '1.5rem',
+        lineHeight: '1.5rem'
+      },
+      [theme.breakpoints.down(900)]: {
+        fontSize: '2rem',
+      },
+      
     },
     employeeDescription: {
       marginRight: "3.5rem",
       marginLeft: "3.5rem",
       [theme.breakpoints.down(1124)]: {
+        fontSize: '0.9rem',
+        marginRight: "2rem",
+        marginLeft: "2rem",
+      },
+      [theme.breakpoints.down(900)]: {
+        fontSize: '1rem',
         marginRight: '10rem',
         marginLeft: '10rem',
       },

@@ -79,6 +79,7 @@ const useStyles = makeStyles(theme =>
         "& fieldset": {
           borderColor: "white",
           borderWidth: "0.2rem",
+          color: 'white',
         },
         "&:hover fieldset": {
           borderColor: "white",
@@ -98,8 +99,8 @@ const useStyles = makeStyles(theme =>
       color: "white",
       backgroundColor: "#DD2854",
       textTransform: "none",
-      fontFamily: "Lato, sans-serif",
-      fontWeight: "bold",
+      fontFamily: "Poppins, sans-serif",
+      fontWeight: 500,
       padding: "0.7rem",
       transition: "all 0.4s ease",
       "&:hover": {
@@ -185,7 +186,7 @@ export default function PanelFour() {
                 style: {
                   fontFamily: "Poppins, sans-serif",
                   fontWeight: "bold",
-                  color: "black",
+                  color: "white",
                 },
               }}
               FormHelperTextProps={{
@@ -207,7 +208,7 @@ export default function PanelFour() {
                 style: {
                   fontFamily: "Poppins, sans-serif",
                   fontWeight: "bold",
-                  color: "black",
+                  color: "white",
                 },
               }}
               FormHelperTextProps={{
@@ -228,7 +229,7 @@ export default function PanelFour() {
                 style: {
                   fontFamily: "Poppins, sans-serif",
                   fontWeight: "bold",
-                  color: "black",
+                  color: "white",
                 },
               }}
               FormHelperTextProps={{

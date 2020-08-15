@@ -64,8 +64,8 @@ const useStyles = makeStyles(theme =>
       color: "white",
       backgroundColor: "#DD2854",
       textTransform: "none",
-      fontFamily: "Lato, sans-serif",
-      fontWeight: "bold",
+      fontFamily: "Poppins, sans-serif",
+      fontWeight: 500,
       padding: "0.7rem",
       transition: "all 0.4s ease",
       "&:hover": {
