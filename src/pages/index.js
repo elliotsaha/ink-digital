@@ -3,15 +3,32 @@ import Layout from "../components/layout"
 import PanelOne from "../components/homepage/PanelOne"
 import PanelTwo from "../components/homepage/PanelTwo"
 import PanelThree from "../components/homepage/PanelThree"
-import PanelFour from '../components/homepage/PanelFour'
-import PanelFive from '../components/homepage/PanelFive'
+import PanelFour from "../components/homepage/PanelFour"
+import PanelFive from "../components/homepage/PanelFive"
 import SEO from "../components/seo"
-
+import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
+import { Helmet } from "react-helmet"
 import "../index.css"
 const IndexPage = () => {
-
   return (
-    <Layout>
+    <React.Fragment>
+      <Helmet>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Raleway:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
+      <Navbar />
       <div className="child">
         <PanelOne />
       </div>
@@ -27,7 +44,10 @@ const IndexPage = () => {
       <div className="child">
         <PanelFive />
       </div>
-    </Layout>
+      <div className="child">
+        <Footer />
+      </div>
+    </React.Fragment>
   )
 }
 

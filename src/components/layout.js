@@ -9,8 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import Header from "./header"
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -34,6 +34,7 @@ const Layout = ({ children }) => {
       <main>
         <Navbar />
         {children}
+        <Footer />
       </main>
     </>
   )
