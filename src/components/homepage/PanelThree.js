@@ -3,10 +3,9 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import Card from "./misc/Card"
 import blueAndYellowInk from "../../images/blot1.mp4"
 
-import google from "../../images/google.jpg"
-import facebook from "../../images/facebook.jpg"
-import microsoft from "../../images/microsoft.jpg"
-import apple from "../../images/apple.jpg"
+import taxMechanic from "../../images/taxMechanic.png"
+import rajahMaggay from "../../images/rajahMaggay.png"
+import angelaLarson from "../../images/angelaLarson.png"
 
 import Button from "@material-ui/core/Button"
 const useStyles = makeStyles(theme =>
@@ -17,7 +16,7 @@ const useStyles = makeStyles(theme =>
       paddingBottom: "12rem",
       paddingTop: "8rem",
       overflow: "auto",
-      marginBottom: '-2px',
+      marginBottom: "-2px",
     },
     cardContainer: {
       display: "flex",
@@ -73,7 +72,7 @@ const useStyles = makeStyles(theme =>
       color: "white",
       fontFamily: "Poppins, sans-serif",
       fontWeight: 800,
-      fontSize: '1.7rem',
+      fontSize: "1.7rem",
       paddingBottom: "1.5rem",
     },
     image: {
@@ -92,7 +91,7 @@ const useStyles = makeStyles(theme =>
       display: "block",
       objectFit: "cover",
       [theme.breakpoints.down(768)]: {
-        height: '20rem',
+        height: "20rem",
       },
     },
     buttonContainer: {
@@ -165,8 +164,10 @@ const useStyles = makeStyles(theme =>
       paddingTop: "2rem",
       paddingBottom: "2rem",
       fontFamily: "Poppins, sans-serif",
-      [theme.breakpoints.down(768)]: {
-        fontSize: '1.5rem',
+      paddingRight: "1rem",
+      [theme.breakpoints.down(990)]: {
+        fontSize: "1.3rem",
+        lineHeight: "2rem",
       },
     },
   })
@@ -185,17 +186,18 @@ export default function PanelTwo() {
                 <div className={classes.hoverText}>
                   <div className={classes.hoverTextInner}>
                     <div className={classes.hoverTextSmall}>
-                      Profesional Services
+                      Tax Consultation
                     </div>
                     <div className={classes.hoverTextMain}>
-                      Unique branding is key when competing in a crowded marketspace
+                      We’ll find out information about your tax issues to find
+                      the best tax solution for you!
                     </div>
-                    <div className={classes.hoverTextSmall}>Google Inc.</div>
+                    <div className={classes.hoverTextSmall}>Tax Mechanic</div>
                   </div>
                 </div>
               </div>
 
-              <img src={google} className={classes.imageLeft} />
+              <img src={taxMechanic} className={classes.imageLeft} />
             </div>
           </div>
 
@@ -204,35 +206,32 @@ export default function PanelTwo() {
               <div className={classes.overlay}>
                 <div className={classes.hoverText}>
                   <div className={classes.hoverTextInner}>
-                    <div className={classes.hoverTextSmall}>
-                      Profesional Services
-                    </div>
+                    <div className={classes.hoverTextSmall}>Politics</div>
                     <div className={classes.hoverTextMain}>
-                      Reaching new audiences with targeted digital marketing
-                      campaigns
+                      Research & Policy Advisor in YEG, Currently Running For
+                      Edmonton City Council.
                     </div>
-                    <div className={classes.hoverTextSmall}>Microsoft Inc.</div>
+                    <div className={classes.hoverTextSmall}>Rajah Maggay</div>
                   </div>
                 </div>
               </div>
-              <img src={microsoft} className={classes.image} />
+              <img src={rajahMaggay} className={classes.image} />
             </div>
 
             <div className={classes.card}>
               <div className={classes.overlay}>
                 <div className={classes.hoverText}>
                   <div className={classes.hoverTextInner}>
-                    <div className={classes.hoverTextSmall}>
-                      Profesional Services
-                    </div>
+                    <div className={classes.hoverTextSmall}>Real Estate</div>
                     <div className={classes.hoverTextMain}>
-                      Expanding the tech market by bringing in unique and elegant products
+                      Angela Larson is a top producing real estate agent in the
+                      Twin Cities metro area.
                     </div>
-                    <div className={classes.hoverTextSmall}>Apple Inc.</div>
+                    <div className={classes.hoverTextSmall}>Angela Larson</div>
                   </div>
                 </div>
               </div>
-              <img src={apple} className={classes.image} />
+              <img src={angelaLarson} className={classes.image} />
             </div>
           </div>
         </div>
