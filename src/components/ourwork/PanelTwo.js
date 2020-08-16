@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme =>
       position: "relative",
       paddingBottom: "2.5rem",
       paddingTop: "4rem",
-      overflow: "auto",
+      overflow: "hidden",
       marginBottom: "-2px",
     },
     cardContainer: {
@@ -90,6 +90,9 @@ const useStyles = makeStyles(theme =>
       zIndex: 3,
     },
     overlayLeft: {
+      [theme.breakpoints.down(768)]: {
+        height: "20rem",
+      },
       marginTop: '2.95rem',
       position: "absolute",
       display: "flex",
