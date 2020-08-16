@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) =>
     root: {
       paddingTop: "2.5rem",
       paddingBottom: "2rem",
-      overflow: "auto",
+      overflow: "hidden",
       backgroundColor: "black",
       position: "relative",
     },

@@ -38,6 +38,7 @@ const useStyles = makeStyles(theme =>
       filter: "brightness(20%)",
     },
     title: {
+      paddingTop: '3rem',
       color: "white",
       fontSize: "3rem",
       lineHeight: "2.6rem",
@@ -236,7 +237,7 @@ export default function PanelFour() {
                 className: classes.helperText,
               }}
               multiline
-              rows={10}
+              rows={8}
               className={classes.textField}
               name="Message"
               label="Message"

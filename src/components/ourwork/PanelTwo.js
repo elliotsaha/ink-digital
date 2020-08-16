@@ -1,23 +1,19 @@
 import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
-import Card from "./misc/Card"
-import blueAndYellowInk from "../../images/blot1.mp4"
 
 import google from "../../images/google.jpg"
-import facebook from "../../images/facebook.jpg"
 import microsoft from "../../images/microsoft.jpg"
 import apple from "../../images/apple.jpg"
 
-import Button from "@material-ui/core/Button"
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
-      background: "transparent",
+      background: "#F1F2E4",
       position: "relative",
-      paddingBottom: "12rem",
-      paddingTop: "8rem",
+      paddingBottom: "2.5rem",
+      paddingTop: "4rem",
       overflow: "auto",
-      marginBottom: '-2px',
+      marginBottom: "-2px",
     },
     cardContainer: {
       display: "flex",
@@ -54,27 +50,13 @@ const useStyles = makeStyles(theme =>
       display: "flex",
       justifyContent: "center",
     },
-    videoContainer: {
-      overflow: "auto",
-    },
-    video: {
-      position: "absolute",
-      width: "100%",
-      left: "50%",
-      top: "50%",
-      height: "100%",
-      objectFit: "cover",
-      transform: "translate(-50%, -50%)",
-      zIndex: -1,
-      filter: "brightness(40%)",
-    },
     caseStudiesTitle: {
-      textTransform: "uppercase",
-      color: "white",
       fontFamily: "Poppins, sans-serif",
-      fontWeight: 800,
-      fontSize: '1.7rem',
-      paddingBottom: "1.5rem",
+      color: "#00447B",
+      fontSize: "4rem",
+      fontWeight: 900,
+      lineHeight: '4.5rem',
+      textAlign: 'center',
     },
     image: {
       width: "30rem",
@@ -85,6 +67,7 @@ const useStyles = makeStyles(theme =>
       objectFit: "cover",
     },
     imageLeft: {
+      marginTop: '2.95rem',
       width: "30rem",
       height: "40.87rem",
       margin: 0,
@@ -92,7 +75,7 @@ const useStyles = makeStyles(theme =>
       display: "block",
       objectFit: "cover",
       [theme.breakpoints.down(768)]: {
-        height: '20rem',
+        height: "20rem",
       },
     },
     buttonContainer: {
@@ -106,6 +89,34 @@ const useStyles = makeStyles(theme =>
       textAlign: "center",
       zIndex: 3,
     },
+    overlayLeft: {
+      marginTop: '2.95rem',
+      position: "absolute",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      height: "93.3%",
+      width: "100%",
+      boxShadow: "inset 0 0 0 0.1px #00447B",
+      transition: "all ease 0.35s",
+      opacity: "95%",
+      "& > div": {
+        opacity: 0,
+        transition: "all ease 0.3s",
+      },
+      "&:hover": {
+        boxShadow: "inset 30rem 0 0 0 #00447B",
+        opacity: "90%",
+        "& > div": {
+          opacity: 1,
+          transition: "all ease 1s",
+        },
+      },
+    },
     overlay: {
       position: "absolute",
       display: "flex",
@@ -117,7 +128,7 @@ const useStyles = makeStyles(theme =>
       right: 0,
       height: "100%",
       width: "100%",
-      boxShadow: "inset 0 0 0 0.1px #DD2854",
+      boxShadow: "inset 0 0 0 0.1px #00447B",
       transition: "all ease 0.35s",
       opacity: "95%",
       "& > div": {
@@ -125,26 +136,12 @@ const useStyles = makeStyles(theme =>
         transition: "all ease 0.3s",
       },
       "&:hover": {
-        boxShadow: "inset 30rem 0 0 0 #DD2854",
+        boxShadow: "inset 30rem 0 0 0 #00447B",
         opacity: "90%",
         "& > div": {
           opacity: 1,
           transition: "all ease 1s",
         },
-      },
-    },
-    moreCaseStudiesButton: {
-      zIndex: 3,
-      color: "white",
-      backgroundColor: "#DD2854",
-      textTransform: "none",
-      fontFamily: "Poppins, sans-serif",
-      fontWeight: 500,
-      padding: "0.7rem",
-      transition: "all 0.4s ease",
-      "&:hover": {
-        backgroundColor: "#DD2854",
-        opacity: "85%",
       },
     },
     hoverTextInner: {
@@ -166,7 +163,7 @@ const useStyles = makeStyles(theme =>
       paddingBottom: "2rem",
       fontFamily: "Poppins, sans-serif",
       [theme.breakpoints.down(768)]: {
-        fontSize: '1.5rem',
+        fontSize: "1.5rem",
       },
     },
   })
@@ -175,12 +172,12 @@ export default function PanelTwo() {
   const classes = useStyles()
   return (
     <div className={classes.root}>
+      <div className={classes.caseStudiesTitle}>Case Studies</div>
       <div className={classes.rootInner}>
         <div className={classes.cardBody}>
           <div className={classes.cardContainer}>
-            <div className={classes.caseStudiesTitle}>Case Studies</div>
             <div className={classes.card}>
-              <div className={classes.overlay}>
+              <div className={classes.overlayLeft}>
                 <span></span>
                 <div className={classes.hoverText}>
                   <div className={classes.hoverTextInner}>
@@ -188,7 +185,8 @@ export default function PanelTwo() {
                       Profesional Services
                     </div>
                     <div className={classes.hoverTextMain}>
-                      Unique branding is key when competing in a crowded marketspace
+                      Unique branding is key when competing in a crowded
+                      marketspace
                     </div>
                     <div className={classes.hoverTextSmall}>Google Inc.</div>
                   </div>
@@ -226,7 +224,8 @@ export default function PanelTwo() {
                       Profesional Services
                     </div>
                     <div className={classes.hoverTextMain}>
-                      Expanding the tech market by bringing in unique and elegant products
+                      Expanding the tech market by bringing in unique and
+                      elegant products
                     </div>
                     <div className={classes.hoverTextSmall}>Apple Inc.</div>
                   </div>
@@ -236,22 +235,6 @@ export default function PanelTwo() {
             </div>
           </div>
         </div>
-      </div>
-      <div className={classes.buttonContainer}>
-        <Button className={classes.moreCaseStudiesButton}>
-          View Case Studies
-        </Button>
-      </div>
-      <div className={classes.videoContainer}>
-        <video
-          autoPlay
-          disablePictureInPicture
-          muted
-          loop="loop"
-          className={classes.video}
-        >
-          <source src={blueAndYellowInk} type="video/mp4" />
-        </video>
       </div>
     </div>
   )
