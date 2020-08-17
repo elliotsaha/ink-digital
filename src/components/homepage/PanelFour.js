@@ -2,6 +2,7 @@ import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import blueAndYellowInk from "../../images/blueAndYellowInk.mp4"
 import Button from "@material-ui/core/Button"
+import { Link } from "gatsby"
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
@@ -13,10 +14,10 @@ const useStyles = makeStyles(theme =>
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      minHeight: '100vh',
+      minHeight: "100vh",
       lineHeight: 0,
-      marginTop: '-1px',
-      marginBottom: '-1px'
+      marginTop: "-1px",
+      marginBottom: "-1px",
     },
     videoContainer: {
       overflow: "auto",
@@ -50,16 +51,16 @@ const useStyles = makeStyles(theme =>
       fontSize: "1rem",
       lineHeight: "1.7rem",
       fontFamily: "Poppins, sans-serif",
-      marginRight: '2rem',
-      marginLeft: '2rem',
+      marginRight: "2rem",
+      marginLeft: "2rem",
     },
     buttonContainer: {
       textAlign: "center",
       paddingTop: "1.5rem",
     },
     moreCaseStudiesButton: {
-        paddingRight: '1.5rem',
-        paddingLeft: '1.5rem',
+      paddingRight: "1.5rem",
+      paddingLeft: "1.5rem",
       zIndex: 3,
       color: "white",
       backgroundColor: "#DD2854",
@@ -72,6 +73,10 @@ const useStyles = makeStyles(theme =>
         backgroundColor: "#DD2854",
         opacity: "85%",
       },
+    },
+    buttonLink: {
+      textDecoration: "none",
+      color: "white",
     },
   })
 )
@@ -91,7 +96,11 @@ export default function PanelFour() {
           elementum ut. Vivamus nec sodales lacus, id commodo nisi.
         </div>
         <div className={classes.buttonContainer}>
-          <Button className={classes.moreCaseStudiesButton}>Read More</Button>
+          <Button className={classes.moreCaseStudiesButton}>
+            <Link to="/about" className={classes.buttonLink}>
+              Read More
+            </Link>
+          </Button>
         </div>
       </div>
 

@@ -170,6 +170,10 @@ const useStyles = makeStyles(theme =>
         lineHeight: "2rem",
       },
     },
+    buttonLink: {
+      textDecoration: 'none',
+      color: 'white',
+    },
   })
 )
 export default function PanelTwo() {
@@ -247,7 +251,7 @@ export default function PanelTwo() {
       </div>
       <div className={classes.buttonContainer}>
         <Button className={classes.moreCaseStudiesButton}>
-          View Case Studies
+          <Link to="/ourwork" className={classes.buttonLink}>View Case Studies</Link>
         </Button>
       </div>
       <div className={classes.videoContainer}>

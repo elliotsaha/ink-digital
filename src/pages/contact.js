@@ -58,6 +58,9 @@ const useStyles = makeStyles(theme =>
       textAlign: "center",
       paddingTop: "1.5rem",
     },
+    helperText: {
+      fontFamily: "Poppins, sans-serif",
+    },
     textField: {
       paddingBottom: "1.5rem",
       "& label.Mui-focused": {

@@ -92,7 +92,9 @@ const useStyles = makeStyles(theme =>
         },
       },
     },
-
+    helperText: {
+      fontFamily: "Poppins, sans-serif",
+    },
     moreCaseStudiesButton: {
       paddingRight: "1.5rem",
       paddingLeft: "1.5rem",
@@ -233,6 +235,7 @@ export default function PanelFour() {
                   color: "white",
                 },
               }}
+              
               FormHelperTextProps={{
                 className: classes.helperText,
               }}
