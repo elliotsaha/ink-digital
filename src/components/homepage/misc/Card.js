@@ -2,6 +2,7 @@ import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
 import rightArrow from "../../../images/icons/rightArrow.svg"
+import { Link } from "gatsby"
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme =>
     },
     cardTitle: {
       fontFamily: "Poppins, sans-serif",
-      lineHeight: '2.3rem',
+      lineHeight: "2.3rem",
       fontWeight: "900",
       fontSize: "2rem",
     },
@@ -48,10 +49,13 @@ const useStyles = makeStyles(theme =>
       marginLeft: 0,
       paddingLeft: 0,
     },
+    readMoreLink: {
+      textDecoration: "none",
+    },
   })
 )
 
-export default function Card({ title, paragraph }) {
+export default function Card({ title, paragraph, link }) {
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -60,10 +64,15 @@ export default function Card({ title, paragraph }) {
       </div>
       <div className={classes.paragraphContainer}>{paragraph}</div>
       <Button className={classes.button}>
-        <div className={classes.readMoreContainer}>
-          <div className={classes.readMoreText}>Read More</div>
-          <img src={rightArrow} className={classes.arrowImage} />
-        </div>
+        <Link
+          to={link}
+          className={classes.readMoreLink}
+        >
+          <div className={classes.readMoreContainer}>
+            <div className={classes.readMoreText}>Read More</div>
+            <img src={rightArrow} className={classes.arrowImage} />
+          </div>
+        </Link>
       </Button>
     </div>
   )

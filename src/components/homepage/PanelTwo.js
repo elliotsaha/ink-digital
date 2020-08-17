@@ -74,6 +74,7 @@ export default function PanelTwo() {
               <Card
                 title="Search Engine Optimization"
                 paragraph="Using keyword optimization and content output to build domain authority, we will build or redesign your website to bring you to the first page of Google search so clients can find you."
+                link="/services/search-engine-optimization"
               />
             </div>
 
@@ -81,6 +82,7 @@ export default function PanelTwo() {
               <Card
                 title="Automated Sales funnels"
                 paragraph="Don't spend hours priming potential clients to buy your products or services. Let the system do that for you with email marketing and Facebook Messenger funnels."
+                link="/services/automated-sales-funnels"
               />
             </div>
           </div>
@@ -90,6 +92,7 @@ export default function PanelTwo() {
                 <Card
                   title="Digital Paid Advertising"
                   paragraph="We create custom-made ads to run on Google and Facebook to drive leads to your business. All the benefits of traditional advertising - at a fraction of the cost and twice the return on investment."
+                  link="/services/digital-paid-advertising"
                 />
               </div>
 
@@ -97,6 +100,7 @@ export default function PanelTwo() {
                 <Card
                   title="Social Media Management"
                   paragraph="Facebook and Instagram are the new New York Times. Get the exposure you want with personalized viral content to build brand awareness."
+                  link="/services/social-media-management"
                 />
               </div>
             </div>

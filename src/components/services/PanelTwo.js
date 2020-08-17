@@ -4,6 +4,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import mockup1 from "../../images/mockup1.png"
 import mockup2 from "../../images/mockup2.png"
 import Button from "@material-ui/core/Button"
+import { Link } from "gatsby"
 import rightArrow from "../../images/icons/rightArrow.svg"
 
 import LocalAtmIcon from "@material-ui/icons/LocalAtm"
@@ -72,7 +73,7 @@ const useStyles = makeStyles(theme =>
     containerTop: {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
-      gridTemplateRows: "1fr 1fr",
+      gridTemplateRows: "100% 100%",
       [theme.breakpoints.down(900)]: {
         gridTemplateRows: "100% 1fr 100% 1fr",
         gridTemplateColumns: "1fr",
@@ -81,7 +82,10 @@ const useStyles = makeStyles(theme =>
     mockup1: {
       width: "40rem",
       margin: 0,
-      paddingBottom: "3rem",
+      padding: 0,
+      [theme.breakpoints.down(900)]: {
+        paddingBottom: "3rem",
+      },
     },
     mockup1Container: {
       marginLeft: "auto",
@@ -93,14 +97,21 @@ const useStyles = makeStyles(theme =>
     },
     mockup2Container: {
       marginRight: "auto",
+      paddingTop: "2rem",
       marginTop: "auto",
       marginBottom: "auto",
+      paddingBottom: "4rem",
+      [theme.breakpoints.down(900)]: {
+        paddingBottom: 0,
+      },
     },
     serviceBody2: {
       display: "flex",
       flexDirection: "column",
+      paddingTop: "2rem",
       marginTop: "auto",
       marginBottom: "auto",
+      paddingBottom: "4rem",
     },
     arrowImage: {
       margin: 0,
@@ -119,6 +130,9 @@ const useStyles = makeStyles(theme =>
     button: {
       marginLeft: 0,
       paddingLeft: 0,
+    },
+    readMoreLink: {
+      textDecoration: "none",
     },
   })
 )
@@ -139,10 +153,15 @@ export default function PanelTwo() {
               the first page of Google search so clients can find you.
             </div>
             <Button className={classes.button}>
-              <div className={classes.readMoreContainer}>
-                <div className={classes.readMoreText}>Read More</div>
-                <img src={rightArrow} className={classes.arrowImage} />
-              </div>
+              <Link
+                to="/services/search-engine-optimization"
+                className={classes.readMoreLink}
+              >
+                <div className={classes.readMoreContainer}>
+                  <div className={classes.readMoreText}>Read More</div>
+                  <img src={rightArrow} className={classes.arrowImage} />
+                </div>
+              </Link>
             </Button>
           </div>
           <div className={classes.serviceContainer1}>
@@ -157,10 +176,15 @@ export default function PanelTwo() {
               investment.
             </div>
             <Button className={classes.button}>
-              <div className={classes.readMoreContainer}>
-                <div className={classes.readMoreText}>Read More</div>
-                <img src={rightArrow} className={classes.arrowImage} />
-              </div>
+              <Link
+                to="/services/digital-paid-advertising"
+                className={classes.readMoreLink}
+              >
+                <div className={classes.readMoreContainer}>
+                  <div className={classes.readMoreText}>Read More</div>
+                  <img src={rightArrow} className={classes.arrowImage} />
+                </div>
+              </Link>
             </Button>
           </div>
         </div>
@@ -182,10 +206,15 @@ export default function PanelTwo() {
               and Facebook Messenger funnels.
             </div>
             <Button className={classes.button}>
-              <div className={classes.readMoreContainer}>
-                <div className={classes.readMoreText}>Read More</div>
-                <img src={rightArrow} className={classes.arrowImage} />
-              </div>
+              <Link
+                to="/services/automated-sales-funnels"
+                className={classes.readMoreLink}
+              >
+                <div className={classes.readMoreContainer}>
+                  <div className={classes.readMoreText}>Read More</div>
+                  <img src={rightArrow} className={classes.arrowImage} />
+                </div>
+              </Link>
             </Button>
           </div>
           <div className={classes.serviceContainer1}>
@@ -199,10 +228,13 @@ export default function PanelTwo() {
               awareness.
             </div>
             <Button className={classes.button}>
+            <Link to="/services/social-media-management" className={classes.readMoreLink}>
               <div className={classes.readMoreContainer}>
                 <div className={classes.readMoreText}>Read More</div>
                 <img src={rightArrow} className={classes.arrowImage} />
               </div>
+            </Link>
+              
             </Button>
           </div>
         </div>
