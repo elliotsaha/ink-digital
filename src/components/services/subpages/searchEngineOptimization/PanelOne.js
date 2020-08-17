@@ -1,6 +1,6 @@
 import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
-import cityScenes from '../../images/cityScenes.mp4'
+import cityScenes from '../../../../images/cityScenes.mp4'
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
@@ -27,13 +27,13 @@ const useStyles = makeStyles(theme =>
       fontFamily: "Poppins, sans-serif",
       fontWeight: "bolder",
       fontSize: "5rem",
-      lineHeight: '5rem',
+      lineHeight: '6rem',
       color: "white",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
       marginTop: "auto",
-      [theme.breakpoints.down(400)]: {
+      [theme.breakpoints.down(500)]: {
         fontSize: '3rem',
         lineHeight: "4rem",
     }
@@ -50,7 +50,7 @@ export default function PanelOne() {
         </video>
       </div>
       <div className={classes.text}>
-        Our Services
+        Digital & Direct
       </div>
     </div>
   )

@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme =>
       width: "100%",
       left: "50%",
       top: "45%",
-      height: "91%",
+      height: "100%",
       objectFit: "cover",
       transform: "translate(-50%, -50%)",
       zIndex: -1,

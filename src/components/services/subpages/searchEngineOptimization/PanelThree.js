@@ -1,11 +1,11 @@
 import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 
-import mockup1 from "../../images/mockup1.png"
-import mockup2 from "../../images/mockup2.png"
+import mockup1 from "../../../../images/mockup1.png"
+import mockup2 from "../../../../images/mockup2.png"
 import Button from "@material-ui/core/Button"
 import { Link } from "gatsby"
-import rightArrow from "../../images/icons/rightArrow.svg"
+import rightArrow from "../../../../images/icons/rightArrow.svg"
 
 import LocalAtmIcon from "@material-ui/icons/LocalAtm"
 import PageviewOutlinedIcon from "@material-ui/icons/PageviewOutlined"
@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme =>
     root: {
       background: "#F1F2E4",
       position: "relative",
-      paddingTop: "3rem",
+      paddingTop: "1.5rem",
       overflow: "hidden",
       fontFamily: "Poppins, sans-serif",
     },
