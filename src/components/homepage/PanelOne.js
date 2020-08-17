@@ -4,7 +4,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
-import placeholderInkBlot from "../../images/placeholders/InkBlot.png"
+import placeholderInkBlot from "../../images/placeholders/inkBlot.png"
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
