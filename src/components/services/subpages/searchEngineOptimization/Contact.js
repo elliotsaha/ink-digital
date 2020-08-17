@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme =>
         borderBottomColor: "#00447B",
       },
       "& .MuiOutlinedInput-root": {
-        width: "25rem",
+        width: "30rem",
         [theme.breakpoints.down(1100)]: {
           width: "20rem",
         },
