@@ -33,6 +33,10 @@ const useStyles = makeStyles(theme =>
       alignItems: "center",
       justifyContent: "center",
       marginTop: "auto",
+      [theme.breakpoints.down(400)]: {
+        fontSize: '3rem',
+        lineHeight: "4rem",
+    }
     },
   })
 )

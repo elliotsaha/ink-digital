@@ -50,7 +50,7 @@ export default function PanelOne() {
         </video>
       </div>
       <div className={classes.text}>
-        Our Work
+        Our Services
       </div>
     </div>
   )

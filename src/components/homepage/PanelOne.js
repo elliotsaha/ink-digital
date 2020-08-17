@@ -33,6 +33,7 @@ const useStyles = makeStyles(theme =>
       alignItems: "center",
       marginTop: "auto",
       [theme.breakpoints.down(715)]: {
+        paddingRight: '1.5rem',
         fontSize: "2rem",
         lineHeight: "2.8rem",
       },
@@ -67,11 +68,25 @@ const useStyles = makeStyles(theme =>
         width: "auto",
         paddingRight: "3rem",
       },
+      [theme.breakpoints.down(370)]: {
+        fontSize: "0.9rem",
+        lineHeight: "1.5rem",
+        width: "auto",
+        paddingRight: "0.7rem",
+      },
     },
     title: {
       width: '35rem',
       [theme.breakpoints.down(715)]: {
         width: 'auto',
+      },
+      [theme.breakpoints.down(370)]: {
+        fontSize: '1.8rem',
+        lineHeight: '2.3rem',
+      },
+      [theme.breakpoints.down(345)]: {
+        fontSize: '1.5rem',
+        lineHeight: '2rem',
       },
     },
   })
@@ -94,9 +109,7 @@ const PanelOne = () => {
             We'll find you the clients.
           </div>
           <div className={classes.subText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
-            enim vitae magna vulputate venenatis. Maecenas feugiat quam quis
-            quam varius molestie.
+            We'll find your customers, control your search engine optimization, and social media optimization, so you can focus on what you do best.
           </div>
           <Button className={classes.button}>Get In Touch</Button>
         </div>
