@@ -5,8 +5,6 @@ import TextField from "@material-ui/core/TextField"
 import Button from "@material-ui/core/Button"
 import Layout from "../components/layout"
 import Error from "@material-ui/icons/Error"
-import Snackbar from '@material-ui/core/Snackbar';
-import Alert from '@material-ui/lab/Alert';
 
 const useStyles = makeStyles(theme =>
   createStyles({
@@ -228,21 +226,6 @@ export default function PanelFour() {
       )
     }
   }
-
-  const [open, setOpen] = useState(false)
-
-  const handleClick = () => {
-    setOpen(true)
-  }
-
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return
-    }
-
-    setOpen(false)
-  }
-
   return (
     <Layout>
       <div className={classes.root}>
@@ -334,22 +317,10 @@ export default function PanelFour() {
                 <Button
                   type="submit"
                   className={classes.moreCaseStudiesButton}
-                  onClick={() => {
-                    onSubmit()
-                    handleClick()
-                  }}
+                  onClick={onSubmit}
                 >
                   Submit
                 </Button>
-                <Snackbar
-                  open={open}
-                  autoHideDuration={6000}
-                  onClose={handleClose}
-                >
-                  <Alert onClose={handleClose} severity="success">
-                    This is a success message!
-                  </Alert>
-                </Snackbar>
               </div>
             </form>
           </div>
