@@ -106,8 +106,8 @@ const PanelOne = () => {
           className={classes.video}
           src={inkCloud}
           type="video/mp4"
-          poster={placeholderInkBlot}
-        />
+         
+        />{/*poster={placeholderInkBlot}*/}
       </div>
       <div className={classes.text}>
         <div>
