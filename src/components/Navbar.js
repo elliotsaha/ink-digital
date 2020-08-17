@@ -68,7 +68,7 @@ const useStyles = makeStyles(theme =>
     closeMenuButton: {
       marginRight: "auto",
       marginLeft: 0,
-      color: 'white',
+      color: "white",
     },
     drawerPaper: {
       width: drawerWidth,
@@ -168,40 +168,40 @@ const useStyles = makeStyles(theme =>
       marginBottom: "0.3rem",
     },
     sideBarActive: {
-        textDecoration: "none",
+      textDecoration: "none",
+      border: 0,
+      boxShadow: "none",
+      fontSize: "0.9rem",
+      "&:visited": {
         border: 0,
-        boxShadow: "none",
-        fontSize: '0.9rem',
-        "&:visited": {
-          border: 0,
-        },
-        "&:hover": {
-          border: 0,
-        },
-        "&:link": {
-          border: 0,
-        },
-        "&:active": {
-          border: 0,
-        },
+      },
+      "&:hover": {
+        border: 0,
+      },
+      "&:link": {
+        border: 0,
+      },
+      "&:active": {
+        border: 0,
+      },
     },
     sideBarInactive: {
-        textDecoration: "none",
+      textDecoration: "none",
+      border: 0,
+      boxShadow: "none",
+      fontSize: "0.9rem",
+      "&:visited": {
         border: 0,
-        boxShadow: "none",
-        fontSize: '0.9rem',
-        "&:visited": {
-          border: 0,
-        },
-        "&:hover": {
-          border: 0,
-        },
-        "&:link": {
-          border: 0,
-        },
-        "&:active": {
-          border: 0,
-        },
+      },
+      "&:hover": {
+        border: 0,
+      },
+      "&:link": {
+        border: 0,
+      },
+      "&:active": {
+        border: 0,
+      },
       color: "white",
       opacity: "80%",
     },
@@ -423,6 +423,7 @@ export default function Navbar() {
             </Link>
             <Link
               to="/about"
+              partiallyActive={true}
               className={classes.inactive}
               activeClassName={classes.active}
             >
@@ -430,6 +431,7 @@ export default function Navbar() {
             </Link>
             <Link
               to="/ourwork"
+              partiallyActive={true}
               className={classes.inactive}
               activeClassName={classes.active}
             >
@@ -437,6 +439,7 @@ export default function Navbar() {
             </Link>
             <Link
               to="/services"
+              partiallyActive={true}
               className={classes.inactive}
               activeClassName={classes.active}
             >

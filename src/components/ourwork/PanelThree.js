@@ -63,7 +63,6 @@ const useStyles = makeStyles(theme =>
       paddingBottom: "0.75rem",
     },
     icon: {
-      
       width: '5rem',
     },
   })

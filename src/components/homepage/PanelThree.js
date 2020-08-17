@@ -182,7 +182,7 @@ export default function PanelTwo() {
             <div className={classes.caseStudiesTitle}>Case Studies</div>
 
             <div className={classes.card}>
-              <Link to="/taxmechanic">
+              <Link to="/ourwork/taxmechanic">
                 <div className={classes.overlay}>
                   <span></span>
                   <div className={classes.hoverText}>
@@ -206,7 +206,7 @@ export default function PanelTwo() {
 
           <div className={classes.cardContainerWithShift}>
             <div className={classes.card}>
-              <Link to="/rajahmaggay">
+              <Link to="/ourwork/rajahmaggay">
                 <div className={classes.overlay}>
                   <div className={classes.hoverText}>
                     <div className={classes.hoverTextInner}>
@@ -224,7 +224,7 @@ export default function PanelTwo() {
             </div>
 
             <div className={classes.card}>
-              <Link to="/angelalarson">
+              <Link to="/ourwork/angelalarson">
                 <div className={classes.overlay}>
                   <div className={classes.hoverText}>
                     <div className={classes.hoverTextInner}>
