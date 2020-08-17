@@ -51,7 +51,7 @@ export default function NotFound() {
             <source src={cityScenes} type="video/mp4" />
           </video>
         </div>
-        <div className={classes.text}>404 Not Found</div>
+        <div className={classes.text}>Thank You!</div>
       </div>
     </Layout>
   )

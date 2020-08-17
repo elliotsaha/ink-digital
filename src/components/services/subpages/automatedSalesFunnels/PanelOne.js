@@ -1,11 +1,10 @@
 import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
-import cityScenes from "../images/cityScenes.mp4"
-import Layout from "../components/layout"
+import cityScenes from '../../../../images/cityScenes.mp4'
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
-      overflow: "auto",
+      overflow: "hidden",
     },
     videoContainer: {
       overflow: "auto",
@@ -28,31 +27,31 @@ const useStyles = makeStyles(theme =>
       fontFamily: "Poppins, sans-serif",
       fontWeight: "bolder",
       fontSize: "5rem",
-      lineHeight: "5rem",
+      lineHeight: '6rem',
       color: "white",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
       marginTop: "auto",
-      [theme.breakpoints.down(400)]: {
-        fontSize: "3rem",
+      [theme.breakpoints.down(500)]: {
+        fontSize: '3rem',
         lineHeight: "4rem",
-      },
+    }
     },
   })
 )
-export default function NotFound() {
+export default function PanelOne() {
   const classes = useStyles()
   return (
-    <Layout>
-      <div className={classes.root}>
-        <div className={classes.videoContainer}>
-          <video autoPlay muted loop="loop" className={classes.video}>
-            <source src={cityScenes} type="video/mp4" />
-          </video>
-        </div>
-        <div className={classes.text}>404 Not Found</div>
+    <div className={classes.root}>
+      <div className={classes.videoContainer}>
+        <video autoPlay muted loop="loop" className={classes.video}>
+          <source src={cityScenes} type="video/mp4" />
+        </video>
       </div>
-    </Layout>
+      <div className={classes.text}>
+        Digital & Direct
+      </div>
+    </div>
   )
 }

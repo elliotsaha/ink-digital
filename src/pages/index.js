@@ -35,7 +35,7 @@ const IndexPage = () => {
       <div className="child">
         <PanelFive />
       </div>
-      <div className="child">
+      <div className="footer">
         <Footer />
       </div>
     </React.Fragment>

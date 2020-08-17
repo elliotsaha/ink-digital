@@ -67,7 +67,7 @@ export default function PanelEight() {
         {/*Social Media Icons*/}
         <div>
           <a
-            href="https://github.com/HerilS"
+            href="https://ca.linkedin.com/in/ink.digital"
             target="_blank"
             rel="noopener noreferrer"
             className={classes.icons}
@@ -77,7 +77,7 @@ export default function PanelEight() {
         </div>
         <div>
           <a
-            href="https://www.instagram.com/herilsaha"
+            href="https://twitter.com/ink.digital"
             target="_blank"
             rel="noopener noreferrer"
             className={classes.icons}
@@ -87,7 +87,7 @@ export default function PanelEight() {
         </div>
         <div>
           <a
-            href="https://ca.linkedin.com/in/herilsaha"
+            href="https://www.instagram.com/ink.digital"
             target="_blank"
             rel="noopener noreferrer"
             className={classes.icons}

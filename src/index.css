@@ -11,3 +11,7 @@ html {
 .child {
     scroll-snap-align: start;
 }
+
+.footer {
+    scroll-snap-align: end;
+}
