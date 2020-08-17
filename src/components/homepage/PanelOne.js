@@ -4,7 +4,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
-
+import placeholderInkBlot from "../../images/placeholders/InkBlot.png"
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme =>
       alignItems: "center",
       marginTop: "auto",
       [theme.breakpoints.down(715)]: {
-        paddingRight: '1.5rem',
+        paddingRight: "1.5rem",
         fontSize: "2rem",
         lineHeight: "2.8rem",
       },
@@ -76,17 +76,17 @@ const useStyles = makeStyles(theme =>
       },
     },
     title: {
-      width: '35rem',
+      width: "35rem",
       [theme.breakpoints.down(715)]: {
-        width: 'auto',
+        width: "auto",
       },
       [theme.breakpoints.down(370)]: {
-        fontSize: '1.8rem',
-        lineHeight: '2.3rem',
+        fontSize: "1.8rem",
+        lineHeight: "2.3rem",
       },
       [theme.breakpoints.down(345)]: {
-        fontSize: '1.5rem',
-        lineHeight: '2rem',
+        fontSize: "1.5rem",
+        lineHeight: "2rem",
       },
     },
   })
@@ -98,16 +98,25 @@ const PanelOne = () => {
     <div className={classes.root}>
       <SEO title="Homepage" />
       <div className={classes.container}>
-        <video autoPlay muted playsInline loop="loop" className={classes.video} src={inkCloud} type="video/mp4" />
+        <video
+          autoPlay
+          muted
+          playsInline
+          loop="loop"
+          className={classes.video}
+          src={inkCloud}
+          type="video/mp4"
+          poster={placeholderInkBlot}
+        />
       </div>
       <div className={classes.text}>
         <div>
           <div className={classes.title}>
-            Focus on what you do best.
-            We'll find you the clients.
+            Focus on what you do best. We'll find you the clients.
           </div>
           <div className={classes.subText}>
-            We'll find your customers, control your search engine optimization, and social media optimization, so you can focus on what you do best.
+            We'll find your customers, control your search engine optimization,
+            and social media optimization, so you can focus on what you do best.
           </div>
           <Button className={classes.button}>Get In Touch</Button>
         </div>
