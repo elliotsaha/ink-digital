@@ -1,8 +1,9 @@
 import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import Contact from "./Contact"
-import mockup1 from "../../../../images/mockup1.png"
-import mockup2 from "../../../../images/mockup2.png"
+import mockup3 from "../../../../images/mockup3.png"
+import mockup4 from "../../../../images/mockup4.png"
+import mockup5 from "../../../../images/mockup5.png"
 import Button from "@material-ui/core/Button"
 import { Link } from "gatsby"
 import rightArrow from "../../../../images/icons/rightArrow.svg"
@@ -75,7 +76,9 @@ const useStyles = makeStyles(theme =>
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
       gridTemplateRows: "100% 100% 100%",
+      gridRowGap: '7rem',
       [theme.breakpoints.down(900)]: {
+        gridRowGap: '3rem',
         gridTemplateRows: "100% 100% 100% 100% 100% 100%",
         gridTemplateColumns: "1fr",
       },
@@ -110,6 +113,7 @@ const useStyles = makeStyles(theme =>
       marginLeft: "auto",
       marginTop: "auto",
       marginBottom: "auto",
+      paddingBottom: '5rem',
       [theme.breakpoints.down(900)]: {
         gridRowStart: 5,
         paddingBottom: "3.5rem",
@@ -120,10 +124,11 @@ const useStyles = makeStyles(theme =>
       marginBottom: "auto",
       paddingLeft: "2rem",
       paddingRight: "3rem",
+      paddingBottom: '5rem',
       [theme.breakpoints.down(900)]: {
         paddingLeft: 0,
         paddingRight: 0,
-        paddingBottom: '5rem',
+        paddingBottom: '3.5rem',
       },
     },
     serviceBody2: {
@@ -134,7 +139,6 @@ const useStyles = makeStyles(theme =>
       },
       marginTop: "auto",
       marginBottom: "auto",
-      paddingBottom: "1rem",
     },
     arrowImage: {
       margin: 0,
@@ -180,10 +184,10 @@ export default function PanelTwo() {
           </div>
         </div>
         <div className={classes.mockup1Container}>
-          <img src={mockup1} className={classes.mockup1} />
+          <img src={mockup3} className={classes.mockup1} />
         </div>
         <div className={classes.mockup2Container}>
-          <img src={mockup2} className={classes.mockup1} />
+          <img src={mockup4} className={classes.mockup1} />
         </div>
         <div className={classes.serviceBody2}>
           <div className={classes.serviceContainer1}>
@@ -206,7 +210,7 @@ export default function PanelTwo() {
         </div>
 
         <div className={classes.mockup3Container}>
-          <img src={mockup1} className={classes.mockup1} />
+          <img src={mockup5} className={classes.mockup1} />
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
-import { mergeClasses } from "@material-ui/styles"
 
 const useStyles = makeStyles(theme =>
   createStyles({
@@ -14,17 +13,20 @@ const useStyles = makeStyles(theme =>
       color: "#00447B",
       flexDirection: "column",
       overflow: "hidden",
+      paddingBottom: "4rem",
     },
     title: {
       fontWeight: 700,
-      fontSize: "2.3rem",
+      fontSize: "3.5rem",
       textAlign: "center",
-      lineHeight: "2.5rem",
+      lineHeight: "3.5rem",
       paddingBottom: "0.5rem",
       paddingRight: "2rem",
       paddingLeft: "2rem",
     },
     paragraph: {
+      fontSize: "1.3rem",
+      lineHeight: "1.7rem",
       textAlign: "center",
       maxWidth: "35rem",
       paddingRight: "2rem",
