@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme =>
       fontFamily: "Poppins, sans-serif",
       color: "#00447B",
       flexDirection: "column",
+      overflow: "hidden",
     },
     title: {
       fontWeight: 700,
@@ -35,7 +36,7 @@ export default function PanelTwo() {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <div className={classes.title}>How SEO can affect your business</div>
+      <div className={classes.title}>What is SEO?</div>
       <div className={classes.paragraph}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus
         risus in tellus sodales, in luctus lorem molestie. Integer viverra odio

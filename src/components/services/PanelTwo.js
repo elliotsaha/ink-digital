@@ -83,9 +83,8 @@ const useStyles = makeStyles(theme =>
       width: "40rem",
       margin: 0,
       padding: 0,
-      [theme.breakpoints.down(900)]: {
-        paddingBottom: "3rem",
-      },
+      paddingBottom: "3rem",
+   
     },
     mockup1Container: {
       marginLeft: "auto",

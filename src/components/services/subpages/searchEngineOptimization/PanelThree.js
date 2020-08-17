@@ -1,6 +1,6 @@
 import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
-
+import Contact from "./Contact"
 import mockup1 from "../../../../images/mockup1.png"
 import mockup2 from "../../../../images/mockup2.png"
 import Button from "@material-ui/core/Button"
@@ -23,8 +23,8 @@ const useStyles = makeStyles(theme =>
     },
     title: {
       fontWeight: 700,
-      fontSize: "2.3rem",
-      lineHeight: "2.8rem",
+      fontSize: "2.5rem",
+      lineHeight: "3rem",
       paddingBottom: "0.5rem",
       color: "#00447B",
       [theme.breakpoints.down(1350)]: {
@@ -46,7 +46,8 @@ const useStyles = makeStyles(theme =>
     paragraph: {
       maxWidth: "28rem",
       color: "#00447B",
-      fontWeight: 500,
+      fontSize: "1.2rem",
+      lineHeight: "2rem",
       [theme.breakpoints.down(1350)]: {
         fontSize: "0.9rem",
       },
@@ -61,7 +62,7 @@ const useStyles = makeStyles(theme =>
     },
     serviceContainer1: {
       paddingLeft: "2rem",
-      paddingBottom: "3rem",
+
       paddingRight: "3rem",
     },
     serviceBody1: {
@@ -73,9 +74,9 @@ const useStyles = makeStyles(theme =>
     containerTop: {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
-      gridTemplateRows: "100% 100%",
+      gridTemplateRows: "100% 100% 100%",
       [theme.breakpoints.down(900)]: {
-        gridTemplateRows: "100% 1fr 100% 1fr",
+        gridTemplateRows: "100% 100% 100% 100% 100% 100%",
         gridTemplateColumns: "1fr",
       },
     },
@@ -83,9 +84,6 @@ const useStyles = makeStyles(theme =>
       width: "40rem",
       margin: 0,
       padding: 0,
-      [theme.breakpoints.down(900)]: {
-        paddingBottom: "3rem",
-      },
     },
     mockup1Container: {
       marginLeft: "auto",
@@ -93,25 +91,50 @@ const useStyles = makeStyles(theme =>
       marginBottom: "auto",
       [theme.breakpoints.down(900)]: {
         gridRowStart: 1,
+        paddingBottom: "3.5rem",
       },
     },
+
     mockup2Container: {
       marginRight: "auto",
-      paddingTop: "2rem",
+
       marginTop: "auto",
       marginBottom: "auto",
-      paddingBottom: "4rem",
+      paddingBottom: "1rem",
       [theme.breakpoints.down(900)]: {
         paddingBottom: 0,
+        paddingTop: "3.5rem",
+      },
+    },
+    mockup3Container: {
+      marginLeft: "auto",
+      marginTop: "auto",
+      marginBottom: "auto",
+      [theme.breakpoints.down(900)]: {
+        gridRowStart: 5,
+        paddingBottom: "3.5rem",
+      },
+    },
+    contactContainer: {
+      marginTop: "auto",
+      marginBottom: "auto",
+      paddingLeft: "2rem",
+      paddingRight: "3rem",
+      [theme.breakpoints.down(900)]: {
+        paddingLeft: 0,
+        paddingRight: 0,
+        paddingBottom: '5rem',
       },
     },
     serviceBody2: {
       display: "flex",
       flexDirection: "column",
-      paddingTop: "2rem",
+      [theme.breakpoints.down(900)]: {
+        paddingTop: "3.5rem",
+      },
       marginTop: "auto",
       marginBottom: "auto",
-      paddingBottom: "4rem",
+      paddingBottom: "1rem",
     },
     arrowImage: {
       margin: 0,
@@ -143,49 +166,17 @@ export default function PanelTwo() {
       <div className={classes.containerTop}>
         <div className={classes.serviceBody1}>
           <div className={classes.serviceContainer1}>
-            <div>
-              <PageviewOutlinedIcon className={classes.icon} />
-            </div>
-            <div className={classes.title}>Search Engine Optimization</div>
+            <div className={classes.title}>Why SEO is important</div>
             <div className={classes.paragraph}>
-              Using keyword optimization and content output to build domain
-              authority, we will build or redesign your website to bring you to
-              the first page of Google search so clients can find you.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              dapibus risus in tellus sodales, in luctus lorem molestie. Integer
+              viverra odio leo, quis suscipit urna vehicula nec. Sed a libero
+              mi. In ultrices quam ac auctor egestas. Nulla et ex vel felis
+              lobortis eleifend non eu diam. Sed at enim risus. Morbi porttitor
+              arcu eget mollis pretium. Aenean imperdiet nisl sed sem facilisis,
+              quis ultrices magna tristique. Integer a eros quis eros
+              condimentum sollicitudin.
             </div>
-            <Button className={classes.button}>
-              <Link
-                to="/services/search-engine-optimization"
-                className={classes.readMoreLink}
-              >
-                <div className={classes.readMoreContainer}>
-                  <div className={classes.readMoreText}>Read More</div>
-                  <img src={rightArrow} className={classes.arrowImage} />
-                </div>
-              </Link>
-            </Button>
-          </div>
-          <div className={classes.serviceContainer1}>
-            <div>
-              <LocalAtmIcon className={classes.icon} />
-            </div>
-            <div className={classes.title}>Digital Paid Advertising</div>
-            <div className={classes.paragraph}>
-              We create custom-made ads to run on Google and Facebook to drive
-              leads to your business. All the benefits of traditional
-              advertising - at a fraction of the cost and twice the return on
-              investment.
-            </div>
-            <Button className={classes.button}>
-              <Link
-                to="/services/digital-paid-advertising"
-                className={classes.readMoreLink}
-              >
-                <div className={classes.readMoreContainer}>
-                  <div className={classes.readMoreText}>Read More</div>
-                  <img src={rightArrow} className={classes.arrowImage} />
-                </div>
-              </Link>
-            </Button>
           </div>
         </div>
         <div className={classes.mockup1Container}>
@@ -196,47 +187,26 @@ export default function PanelTwo() {
         </div>
         <div className={classes.serviceBody2}>
           <div className={classes.serviceContainer1}>
-            <div>
-              <DonutSmallOutlined className={classes.icon} />
+            <div className={classes.title}>
+              How SEO Can Affect Your Business
             </div>
-            <div className={classes.title}>Automated Sales funnels</div>
             <div className={classes.paragraph}>
-              Don't spend hours priming potential clients to buy your products
-              or services. Let the system do that for you with email marketing
-              and Facebook Messenger funnels.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              dapibus risus in tellus sodales, in luctus lorem molestie. Integer
+              viverra odio leo, quis suscipit urna vehicula nec. Sed a libero
+              mi. In ultrices quam ac auctor egestas. Nulla et ex vel felis
+              lobortis eleifend non eu diam. Sed at enim risus. Morbi porttitor
+              arcu eget mollis pretium.
             </div>
-            <Button className={classes.button}>
-              <Link
-                to="/services/automated-sales-funnels"
-                className={classes.readMoreLink}
-              >
-                <div className={classes.readMoreContainer}>
-                  <div className={classes.readMoreText}>Read More</div>
-                  <img src={rightArrow} className={classes.arrowImage} />
-                </div>
-              </Link>
-            </Button>
           </div>
-          <div className={classes.serviceContainer1}>
-            <div>
-              <DevicesIcon className={classes.icon} />
-            </div>
-            <div className={classes.title}>Social Media Management</div>
-            <div className={classes.paragraph}>
-              Facebook and Instagram are the new New York Times. Get the
-              exposure you want with personalized viral content to build brand
-              awareness.
-            </div>
-            <Button className={classes.button}>
-            <Link to="/services/social-media-management" className={classes.readMoreLink}>
-              <div className={classes.readMoreContainer}>
-                <div className={classes.readMoreText}>Read More</div>
-                <img src={rightArrow} className={classes.arrowImage} />
-              </div>
-            </Link>
-              
-            </Button>
-          </div>
+        </div>
+
+        <div className={classes.contactContainer}>
+          <Contact />
+        </div>
+
+        <div className={classes.mockup3Container}>
+          <img src={mockup1} className={classes.mockup1} />
         </div>
       </div>
     </div>

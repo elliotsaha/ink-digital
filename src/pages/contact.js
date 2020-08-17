@@ -4,6 +4,10 @@ import blueAndYellowInk from "../images/cityScenes.mp4"
 import TextField from "@material-ui/core/TextField"
 import Button from "@material-ui/core/Button"
 import Layout from "../components/layout"
+import Error from "@material-ui/icons/Error"
+import Snackbar from '@material-ui/core/Snackbar';
+import Alert from '@material-ui/lab/Alert';
+
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
@@ -96,7 +100,47 @@ const useStyles = makeStyles(theme =>
         },
       },
     },
-
+    textFieldError: {
+      paddingBottom: "1.5rem",
+      "& label.Mui-focused": {
+        color: "white",
+        fontFamily: "Poppins, sans-serif",
+        fontWeight: "bold",
+      },
+      "& label": {
+        color: "white",
+        fontFamily: "Poppins, sans-serif",
+        fontWeight: 600,
+      },
+      "& .MuiInput-underline:after": {
+        borderBottomColor: "white",
+      },
+      "& .MuiOutlinedInput-root": {
+        width: "29rem",
+        [theme.breakpoints.down(600)]: {
+          width: "20rem",
+        },
+        "& fieldset": {
+          borderColor: "white",
+          borderWidth: "0.2rem",
+          color: "white",
+        },
+        "&:focus fieldset": {
+          borderColor: "white",
+          borderWidth: "0.2rem",
+        },
+        "&.Mui-focused fieldset": {
+          borderColor: "white",
+          borderWidth: "0.2rem",
+        },
+      },
+    },
+    error: {
+      verticalAlign: "middle",
+      width: "1rem",
+      marginRight: "0.5rem",
+      marginLeft: "-0.8rem",
+    },
     moreCaseStudiesButton: {
       paddingRight: "1.5rem",
       paddingLeft: "1.5rem",
@@ -117,7 +161,6 @@ const useStyles = makeStyles(theme =>
 )
 export default function PanelFour() {
   const classes = useStyles()
-
   // States for form fields and error handling
   const [name, setName] = useState("")
   const [isNameError, setIsNameError] = useState(false)
@@ -152,7 +195,12 @@ export default function PanelFour() {
     if (name === "") {
       e.preventDefault()
       setIsNameError(true)
-      setNameError("Required Field")
+      setNameError(
+        <div>
+          <Error className={classes.error} />
+          <span>Required Field</span>
+        </div>
+      )
     }
     // Regex expression to know if email is invalid
     if (
@@ -162,13 +210,37 @@ export default function PanelFour() {
     ) {
       e.preventDefault()
       setIsEmailError(true)
-      setEmailError("Invalid Email")
+      setEmailError(
+        <div>
+          <Error className={classes.error} />
+          <span>Invalid Email</span>
+        </div>
+      )
     }
     if (paragraph === "") {
       e.preventDefault()
       setIsParagraphError(true)
-      setParagraphError("Required Field")
+      setParagraphError(
+        <div>
+          <Error className={classes.error} />
+          <span>Required Field</span>
+        </div>
+      )
     }
+  }
+
+  const [open, setOpen] = useState(false)
+
+  const handleClick = () => {
+    setOpen(true)
+  }
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return
+    }
+
+    setOpen(false)
   }
 
   return (
@@ -182,7 +254,6 @@ export default function PanelFour() {
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              action="/thankyou"
             >
               <input type="hidden" name="bot-field" />{" "}
               {/*Hidden Input for bot detection*/}
@@ -198,7 +269,9 @@ export default function PanelFour() {
                 FormHelperTextProps={{
                   className: classes.helperText,
                 }}
-                className={classes.textField}
+                className={
+                  isNameError ? classes.textFieldError : classes.textField
+                }
                 name="Name"
                 label="Name"
                 value={name}
@@ -220,7 +293,9 @@ export default function PanelFour() {
                 FormHelperTextProps={{
                   className: classes.helperText,
                 }}
-                className={classes.textField}
+                className={
+                  isEmailError ? classes.textFieldError : classes.textField
+                }
                 name="Email"
                 label="Email"
                 value={email}
@@ -243,7 +318,9 @@ export default function PanelFour() {
                 }}
                 multiline
                 rows={8}
-                className={classes.textField}
+                className={
+                  isParagraphError ? classes.textFieldError : classes.textField
+                }
                 name="Message"
                 label="Message"
                 value={paragraph}
@@ -257,10 +334,22 @@ export default function PanelFour() {
                 <Button
                   type="submit"
                   className={classes.moreCaseStudiesButton}
-                  onClick={onSubmit}
+                  onClick={() => {
+                    onSubmit()
+                    handleClick()
+                  }}
                 >
                   Submit
                 </Button>
+                <Snackbar
+                  open={open}
+                  autoHideDuration={6000}
+                  onClose={handleClose}
+                >
+                  <Alert onClose={handleClose} severity="success">
+                    This is a success message!
+                  </Alert>
+                </Snackbar>
               </div>
             </form>
           </div>
