@@ -1,10 +1,10 @@
 import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
-
+import taxMechanicCS from "../../../images/taxMechanicCS.png"
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
-      backgroundColor: "#262628",
+      backgroundColor: "#1F3B4E",
       paddingTop: "5rem",
       overflow: 'hidden',
     },
@@ -23,6 +23,17 @@ const useStyles = makeStyles(theme =>
         fontSize: "2.3rem",
         lineHeight: "3rem",
       },
+    },
+    image: {
+      width: "100%",
+      objectFit: "cover",
+      margin: 0,
+    },
+    imageContainer: {
+      backgroundColor: "#3C3C41",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
     },
     text: {
       fontFamily: "Poppins, sans-serif",
@@ -55,17 +66,17 @@ const useStyles = makeStyles(theme =>
     },
   })
 )
-export default function PanelTwo() {
+export default function PanelOne() {
   const classes = useStyles()
   return (
     <div className={classes.root}>
       <div className={classes.textContainer}>
         <div className={classes.text}>
           <div className={classes.mainTitle}>
-            The Aftermath.
+            Tax Mechanic.
           </div>
           <div>
-            <div className={classes.subTitles}>Branding</div>
+            <div className={classes.subTitles}>Who Are They</div>
             <div className={classes.para}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               tempus, dolor et semper malesuada, velit ex imperdiet ante, at
@@ -76,20 +87,7 @@ export default function PanelTwo() {
             </div>
           </div>
           <div>
-            <div className={classes.subTitles}>Strategy</div>
-            <div className={classes.para}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              tempus, dolor et semper malesuada, velit ex imperdiet ante, at
-              fringilla ipsum arcu sed dui. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Sed tempus, dolor et semper
-              malesuada, velit ex imperdiet ante, at fringilla ipsum arcu sed
-              dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              tempus, dolor et semper malesuada, velit ex imperdiet ante, at
-              fringilla ipsum arcu sed dui.
-            </div>
-          </div>
-          <div>
-            <div className={classes.subTitles}>Results</div>
+            <div className={classes.subTitles}>The Struggle</div>
             <div className={classes.para}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               tempus, dolor et semper malesuada, velit ex imperdiet ante, at
@@ -102,6 +100,10 @@ export default function PanelTwo() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className={classes.imageContainer}>
+        <img src={taxMechanicCS} className={classes.image} />
       </div>
     </div>
   )

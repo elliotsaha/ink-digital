@@ -4,7 +4,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
-      backgroundColor: "#262628",
+      backgroundColor: "#40405B",
       paddingTop: "5rem",
       overflow: 'hidden',
     },

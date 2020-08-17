@@ -1,10 +1,9 @@
 import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
-
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
-      backgroundColor: "#262628",
+      backgroundColor: "#1F3B4E",
       paddingTop: "5rem",
       overflow: 'hidden',
     },
