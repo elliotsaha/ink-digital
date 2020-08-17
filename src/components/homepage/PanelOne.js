@@ -98,9 +98,7 @@ const PanelOne = () => {
     <div className={classes.root}>
       <SEO title="Homepage" />
       <div className={classes.container}>
-        <video autoPlay muted loop="loop" className={classes.video}>
-          <source src={inkCloud} type="video/mp4" />
-        </video>
+        <video autoPlay muted playsInline loop="loop" className={classes.video} src={inkCloud} type="video/mp4" />
       </div>
       <div className={classes.text}>
         <div>
