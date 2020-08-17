@@ -2,7 +2,7 @@ import React from "react"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import Card from "./misc/Card"
 import blueAndYellowInk from "../../images/blot1.mp4"
-
+import { Link } from "gatsby"
 import taxMechanic from "../../images/taxMechanic.png"
 import rajahMaggay from "../../images/rajahMaggay.png"
 import angelaLarson from "../../images/angelaLarson.png"
@@ -180,58 +180,67 @@ export default function PanelTwo() {
         <div className={classes.cardBody}>
           <div className={classes.cardContainer}>
             <div className={classes.caseStudiesTitle}>Case Studies</div>
+
             <div className={classes.card}>
-              <div className={classes.overlay}>
-                <span></span>
-                <div className={classes.hoverText}>
-                  <div className={classes.hoverTextInner}>
-                    <div className={classes.hoverTextSmall}>
-                      Tax Consultation
+              <Link to="/taxmechanic">
+                <div className={classes.overlay}>
+                  <span></span>
+                  <div className={classes.hoverText}>
+                    <div className={classes.hoverTextInner}>
+                      <div className={classes.hoverTextSmall}>
+                        Tax Consultation
+                      </div>
+                      <div className={classes.hoverTextMain}>
+                        We’ll find out information about your tax issues to find
+                        the best tax solution for you!
+                      </div>
+                      <div className={classes.hoverTextSmall}>Tax Mechanic</div>
                     </div>
-                    <div className={classes.hoverTextMain}>
-                      We’ll find out information about your tax issues to find
-                      the best tax solution for you!
-                    </div>
-                    <div className={classes.hoverTextSmall}>Tax Mechanic</div>
                   </div>
                 </div>
-              </div>
 
-              <img src={taxMechanic} className={classes.imageLeft} />
+                <img src={taxMechanic} className={classes.imageLeft} />
+              </Link>
             </div>
           </div>
 
           <div className={classes.cardContainerWithShift}>
             <div className={classes.card}>
-              <div className={classes.overlay}>
-                <div className={classes.hoverText}>
-                  <div className={classes.hoverTextInner}>
-                    <div className={classes.hoverTextSmall}>Politics</div>
-                    <div className={classes.hoverTextMain}>
-                      Research & Policy Advisor in YEG, Currently Running For
-                      Edmonton City Council.
+              <Link to="/rajahmaggay">
+                <div className={classes.overlay}>
+                  <div className={classes.hoverText}>
+                    <div className={classes.hoverTextInner}>
+                      <div className={classes.hoverTextSmall}>Politics</div>
+                      <div className={classes.hoverTextMain}>
+                        Research & Policy Advisor in YEG, Currently Running For
+                        Edmonton City Council.
+                      </div>
+                      <div className={classes.hoverTextSmall}>Rajah Maggay</div>
                     </div>
-                    <div className={classes.hoverTextSmall}>Rajah Maggay</div>
                   </div>
                 </div>
-              </div>
-              <img src={rajahMaggay} className={classes.image} />
+                <img src={rajahMaggay} className={classes.image} />
+              </Link>
             </div>
 
             <div className={classes.card}>
-              <div className={classes.overlay}>
-                <div className={classes.hoverText}>
-                  <div className={classes.hoverTextInner}>
-                    <div className={classes.hoverTextSmall}>Real Estate</div>
-                    <div className={classes.hoverTextMain}>
-                      Angela Larson is a top producing real estate agent in the
-                      Twin Cities metro area.
+              <Link to="/angelalarson">
+                <div className={classes.overlay}>
+                  <div className={classes.hoverText}>
+                    <div className={classes.hoverTextInner}>
+                      <div className={classes.hoverTextSmall}>Real Estate</div>
+                      <div className={classes.hoverTextMain}>
+                        Angela Larson is a top producing real estate agent in
+                        the Twin Cities metro area.
+                      </div>
+                      <div className={classes.hoverTextSmall}>
+                        Angela Larson
+                      </div>
                     </div>
-                    <div className={classes.hoverTextSmall}>Angela Larson</div>
                   </div>
                 </div>
-              </div>
-              <img src={angelaLarson} className={classes.image} />
+                <img src={angelaLarson} className={classes.image} />
+              </Link>
             </div>
           </div>
         </div>
