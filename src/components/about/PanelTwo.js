@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme =>
       marginLeft: "auto",
       marginRight: "auto",
       [theme.breakpoints.down(900)]: {
-        gridTemplateColumns: '1fr'
+        gridTemplateColumns: "1fr",
       },
     },
     employeeTextContainer: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme =>
       fontFamily: "Poppins, sans-serif",
       color: "#00447B",
       [theme.breakpoints.down(1124)]: {
-        paddingBottom: '2rem',
+        paddingBottom: "2rem",
       },
     },
     employeeImageContainer: {
@@ -43,8 +43,8 @@ const useStyles = makeStyles(theme =>
       height: "20rem",
       transition: "all 0.3s ease",
       [theme.breakpoints.down(1124)]: {
-        width: '14rem',
-        height: '14rem',
+        width: "14rem",
+        height: "14rem",
       },
     },
     employeeSubTitle: {
@@ -53,11 +53,11 @@ const useStyles = makeStyles(theme =>
       paddingTop: "0.3rem",
       paddingBottom: "0.6rem",
       [theme.breakpoints.down(1124)]: {
-        fontSize: '1.2rem',
+        fontSize: "1.2rem",
         paddingTop: 0,
       },
       [theme.breakpoints.down(900)]: {
-        fontSize: '1.5rem',
+        fontSize: "1.5rem",
       },
     },
     employeeName: {
@@ -66,30 +66,29 @@ const useStyles = makeStyles(theme =>
       fontWeight: "700",
       lineHeight: "2rem",
       [theme.breakpoints.down(1124)]: {
-        fontSize: '1.5rem',
-        lineHeight: '1.5rem'
+        fontSize: "1.5rem",
+        lineHeight: "1.5rem",
       },
       [theme.breakpoints.down(900)]: {
-        fontSize: '2rem',
+        fontSize: "2rem",
       },
-      
     },
     employeeDescription: {
       marginRight: "3.5rem",
       marginLeft: "3.5rem",
       [theme.breakpoints.down(1124)]: {
-        fontSize: '0.9rem',
+        fontSize: "0.9rem",
         marginRight: "2rem",
         marginLeft: "2rem",
       },
       [theme.breakpoints.down(900)]: {
-        fontSize: '1rem',
-        marginRight: '10rem',
-        marginLeft: '10rem',
+        fontSize: "1rem",
+        marginRight: "10rem",
+        marginLeft: "10rem",
       },
       [theme.breakpoints.down(689)]: {
-        marginRight: '1.2rem',
-        marginLeft: '1.2rem',
+        marginRight: "1.2rem",
+        marginLeft: "1.2rem",
       },
     },
   })
@@ -110,7 +109,7 @@ export default function PanelTwo() {
           {/* No Picture For Heril Saha Yet */}
           <div className={classes.employeeTextContainer}>
             <div className={classes.employeeName}>Heril Saha</div>
-            <div className={classes.employeeSubTitle}>CTO</div>
+            {/*<div className={classes.employeeSubTitle}>CTO</div>*/}
             <div className={classes.employeeDescription}>
               Reprehenderit ullamco qui enim et aute sit do amet incididunt
               dolore commodo dolor. Anim incididunt do enim enim veniam.
@@ -128,7 +127,7 @@ export default function PanelTwo() {
 
           <div className={classes.employeeTextContainer}>
             <div className={classes.employeeName}>Turni Saha</div>
-            <div className={classes.employeeSubTitle}>CEO</div>
+            {/*<div className={classes.employeeSubTitle}>CEO</div>*/}
             <div className={classes.employeeDescription}>
               Reprehenderit ullamco qui enim et aute sit do amet incididunt
               dolore commodo dolor. Anim incididunt do enim enim veniam.
@@ -146,7 +145,7 @@ export default function PanelTwo() {
 
           <div className={classes.employeeTextContainer}>
             <div className={classes.employeeName}>Stephanie Simpson</div>
-            <div className={classes.employeeSubTitle}>CMO</div>
+            {/*<div className={classes.employeeSubTitle}>CMO</div> */}
             <div className={classes.employeeDescription}>
               Reprehenderit ullamco qui enim et aute sit do amet incididunt
               dolore commodo dolor. Anim incididunt do enim enim veniam.
