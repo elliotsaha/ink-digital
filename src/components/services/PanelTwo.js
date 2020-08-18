@@ -73,9 +73,9 @@ const useStyles = makeStyles(theme =>
     containerTop: {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
-      gridTemplateRows: "100% 100%",
+      gridTemplateRows: "50% 50%",
       [theme.breakpoints.down(900)]: {
-        gridTemplateRows: "100% 1fr 100% 1fr",
+        gridTemplateRows: "1fr",
         gridTemplateColumns: "1fr",
       },
     },

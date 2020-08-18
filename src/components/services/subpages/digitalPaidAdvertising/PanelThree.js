@@ -19,8 +19,11 @@ const useStyles = makeStyles(theme =>
       background: "#F1F2E4",
       position: "relative",
       paddingTop: "1.5rem",
-      overflow: "hidden",
+      overflow: "auto",
       fontFamily: "Poppins, sans-serif",
+      [theme.breakpoints.down(900)]: {
+        paddingBottom: '5rem',
+      },
     },
     title: {
       fontWeight: 700,
@@ -75,11 +78,10 @@ const useStyles = makeStyles(theme =>
     containerTop: {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
-      gridTemplateRows: "100% 100% 100%",
-      gridRowGap: '7rem',
+      gridTemplateRows: "1fr 1fr 1fr",
       [theme.breakpoints.down(900)]: {
         gridRowGap: '3rem',
-        gridTemplateRows: "100% 100% 100% 100% 100% 100%",
+        gridTemplateRows: "1fr",
         gridTemplateColumns: "1fr",
       },
     },
@@ -94,7 +96,6 @@ const useStyles = makeStyles(theme =>
       marginBottom: "auto",
       [theme.breakpoints.down(900)]: {
         gridRowStart: 1,
-        paddingBottom: "3.5rem",
       },
     },
 
@@ -106,7 +107,7 @@ const useStyles = makeStyles(theme =>
       paddingBottom: "1rem",
       [theme.breakpoints.down(900)]: {
         paddingBottom: 0,
-        paddingTop: "3.5rem",
+ 
       },
     },
     mockup3Container: {
@@ -116,7 +117,7 @@ const useStyles = makeStyles(theme =>
       paddingBottom: '5rem',
       [theme.breakpoints.down(900)]: {
         gridRowStart: 5,
-        paddingBottom: "3.5rem",
+        paddingBottom: 0,
       },
     },
     contactContainer: {
@@ -128,14 +129,14 @@ const useStyles = makeStyles(theme =>
       [theme.breakpoints.down(900)]: {
         paddingLeft: 0,
         paddingRight: 0,
-        paddingBottom: '3.5rem',
+        paddingBottom: '0rem',
       },
     },
     serviceBody2: {
       display: "flex",
       flexDirection: "column",
       [theme.breakpoints.down(900)]: {
-        paddingTop: "3.5rem",
+        paddingTop: "0rem",
       },
       marginTop: "auto",
       marginBottom: "auto",
