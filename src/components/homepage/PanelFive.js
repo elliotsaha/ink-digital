@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme =>
       filter: "brightness(20%)",
     },
     title: {
-      paddingTop: '3rem',
+      paddingTop: "3rem",
       color: "white",
       fontSize: "3rem",
       lineHeight: "2.6rem",
@@ -78,10 +78,13 @@ const useStyles = makeStyles(theme =>
         [theme.breakpoints.down(600)]: {
           width: "20rem",
         },
+        [theme.breakpoints.down(360)]: {
+          width: "16rem",
+        },
         "& fieldset": {
           borderColor: "white",
           borderWidth: "0.2rem",
-          color: 'white',
+          color: "white",
         },
         "&:hover fieldset": {
           borderColor: "white",
@@ -192,10 +195,12 @@ export default function PanelFour() {
     if (name === "") {
       e.preventDefault()
       setIsNameError(true)
-      setNameError(<div>
-        <Error className={classes.error} />
-        <span>Required Field</span>
-      </div>)
+      setNameError(
+        <div>
+          <Error className={classes.error} />
+          <span>Required Field</span>
+        </div>
+      )
     }
     // Regex expression to know if email is invalid
     if (
@@ -205,132 +210,136 @@ export default function PanelFour() {
     ) {
       e.preventDefault()
       setIsEmailError(true)
-      setEmailError(<div>
-        <Error className={classes.error} />
-        <span>Invalid Email</span>
-      </div>)
+      setEmailError(
+        <div>
+          <Error className={classes.error} />
+          <span>Invalid Email</span>
+        </div>
+      )
     }
     if (paragraph === "") {
       e.preventDefault()
       setIsParagraphError(true)
-      setParagraphError(<div>
-        <Error className={classes.error} />
-        <span>Required Field</span>
-      </div>)
+      setParagraphError(
+        <div>
+          <Error className={classes.error} />
+          <span>Required Field</span>
+        </div>
+      )
     }
   }
 
   return (
     <div className={classes.root}>
-        <div className={classes.text}>
-          <div className={classes.title}>Contact Us </div>
-          <div className={classes.formContainer}>
-            <form
-              name="contact"
-              method="post"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              action="/thankyou"
-            >
-              <input type="hidden" name="bot-field" />{" "}
-              {/*Hidden Input for bot detection*/}
-              {/*Text field for Name*/}
-              <TextField
-                InputProps={{
-                  style: {
-                    fontFamily: "Poppins, sans-serif",
-                    fontWeight: "bold",
-                    color: "white",
-                  },
-                }}
-                FormHelperTextProps={{
-                  className: classes.helperText,
-                }}
-                className={
-                  isNameError ? classes.textFieldError : classes.textField
-                }
-                name="Name"
-                label="Name"
-                value={name}
-                onChange={onNameChange}
-                helperText={nameError}
-                error={isNameError}
-                variant="outlined"
-                color="secondary"
-              />
-              {/*Text field for Email*/}
-              <TextField
-                InputProps={{
-                  style: {
-                    fontFamily: "Poppins, sans-serif",
-                    fontWeight: "bold",
-                    color: "white",
-                  },
-                }}
-                FormHelperTextProps={{
-                  className: classes.helperText,
-                }}
-                className={
-                  isEmailError ? classes.textFieldError : classes.textField
-                }
-                name="Email"
-                label="Email"
-                value={email}
-                onChange={onEmailChange}
-                helperText={emailError}
-                error={isEmailError}
-                variant="outlined"
-              />
-              {/*Text field for Message*/}
-              <TextField
-                InputProps={{
-                  style: {
-                    fontFamily: "Poppins, sans-serif",
-                    fontWeight: "bold",
-                    color: "white",
-                  },
-                }}
-                FormHelperTextProps={{
-                  className: classes.helperText,
-                }}
-                multiline
-                rows={8}
-                className={
-                  isParagraphError ? classes.textFieldError : classes.textField
-                }
-                name="Message"
-                label="Message"
-                value={paragraph}
-                onChange={onParagraphChange}
-                helperText={paragraphError}
-                error={isParagraphError}
-                variant="outlined"
-              />
-              <div>
-                {/*Submit Button*/}
-                <Button
-                  type="submit"
-                  className={classes.moreCaseStudiesButton}
-                  onClick={onSubmit}
-                >
-                  Submit
-                </Button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div className={classes.videoContainer}>
-          <video
-            autoPlay
-            disablePictureInPicture
-            muted
-            loop="loop"
-            className={classes.video}
+      <div className={classes.text}>
+        <div className={classes.title}>Contact Us </div>
+        <div className={classes.formContainer}>
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="/thankyou"
           >
-            <source src={blueAndYellowInk} type="video/mp4" />
-          </video>
+            <input type="hidden" name="bot-field" />{" "}
+            {/*Hidden Input for bot detection*/}
+            {/*Text field for Name*/}
+            <TextField
+              InputProps={{
+                style: {
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: "bold",
+                  color: "white",
+                },
+              }}
+              FormHelperTextProps={{
+                className: classes.helperText,
+              }}
+              className={
+                isNameError ? classes.textFieldError : classes.textField
+              }
+              name="Name"
+              label="Name"
+              value={name}
+              onChange={onNameChange}
+              helperText={nameError}
+              error={isNameError}
+              variant="outlined"
+              color="secondary"
+            />
+            {/*Text field for Email*/}
+            <TextField
+              InputProps={{
+                style: {
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: "bold",
+                  color: "white",
+                },
+              }}
+              FormHelperTextProps={{
+                className: classes.helperText,
+              }}
+              className={
+                isEmailError ? classes.textFieldError : classes.textField
+              }
+              name="Email"
+              label="Email"
+              value={email}
+              onChange={onEmailChange}
+              helperText={emailError}
+              error={isEmailError}
+              variant="outlined"
+            />
+            {/*Text field for Message*/}
+            <TextField
+              InputProps={{
+                style: {
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: "bold",
+                  color: "white",
+                },
+              }}
+              FormHelperTextProps={{
+                className: classes.helperText,
+              }}
+              multiline
+              rows={8}
+              className={
+                isParagraphError ? classes.textFieldError : classes.textField
+              }
+              name="Message"
+              label="Message"
+              value={paragraph}
+              onChange={onParagraphChange}
+              helperText={paragraphError}
+              error={isParagraphError}
+              variant="outlined"
+            />
+            <div>
+              {/*Submit Button*/}
+              <Button
+                type="submit"
+                className={classes.moreCaseStudiesButton}
+                onClick={onSubmit}
+              >
+                Submit
+              </Button>
+            </div>
+          </form>
         </div>
       </div>
+
+      <div className={classes.videoContainer}>
+        <video
+          autoPlay
+          disablePictureInPicture
+          muted
+          loop="loop"
+          className={classes.video}
+        >
+          <source src={blueAndYellowInk} type="video/mp4" />
+        </video>
+      </div>
+    </div>
   )
 }

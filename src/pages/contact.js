@@ -83,6 +83,9 @@ const useStyles = makeStyles(theme =>
         [theme.breakpoints.down(600)]: {
           width: "20rem",
         },
+        [theme.breakpoints.down(360)]: {
+          width: "16rem",
+        },
         "& fieldset": {
           borderColor: "white",
           borderWidth: "0.2rem",
