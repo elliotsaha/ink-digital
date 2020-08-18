@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme =>
     root: {
       backgroundColor: "#F1F2E4",
       paddingTop: "5rem",
-      overflow: "hidden",
+      overflow: "auto",
     },
     container: {
       maxWidth: "67rem",

@@ -4,7 +4,7 @@ import cityScenes from '../../../../images/cityScenes.mp4'
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
-      overflow: "hidden",
+      overflow: "auto",
     },
     videoContainer: {
       overflow: "auto",

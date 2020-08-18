@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme =>
       fontFamily: "Poppins, sans-serif",
       color: "#00447B",
       flexDirection: "column",
-      overflow: "hidden",
+      overflow: "auto",
       paddingBottom: "4rem",
     },
     title: {

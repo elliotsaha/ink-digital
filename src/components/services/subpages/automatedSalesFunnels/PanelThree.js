@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme =>
       background: "#F1F2E4",
       position: "relative",
       paddingTop: "1.5rem",
-      overflow: "hidden",
+      overflow: "auto",
       fontFamily: "Poppins, sans-serif",
     },
     title: {
